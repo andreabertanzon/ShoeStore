@@ -54,10 +54,11 @@
             app:layout_constraintEnd_toEndOf="parent" />
 
         <ImageView
-            android:id="@+id/imageView2"
+            android:id="@+id/blob_image"
             android:layout_width="238dp"
             android:layout_height="225dp"
             android:layout_marginTop="24dp"
+            android:contentDescription="@string/logo_welcome_text"
             android:src="@drawable/ic_blob"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.497"
@@ -69,6 +70,7 @@
             android:layout_width="129dp"
             android:layout_height="144dp"
             android:layout_marginTop="56dp"
+            android:contentDescription="@string/logo_welcome_text"
             android:src="@drawable/ic_shopping_basket"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

@@ -11,4 +11,5 @@
     <string name="welcome_body">The ultimate place to manage your personal Shoe Store!</string>
     <string name="next_button">Continue</string>
     <string name="welcome_info_text">More info on the next screen,\nwhat are you waiting for?\nPress Continue!</string>
+    <string name="logo_welcome_text">Logo</string>
 </resources>
