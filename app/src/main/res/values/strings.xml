@@ -12,4 +12,7 @@
     <string name="next_button">Continue</string>
     <string name="welcome_info_text">More info on the next screen,\nwhat are you waiting for?\nPress Continue!</string>
     <string name="logo_welcome_text">Logo</string>
+    <string name="first_info_text">- In the next screen you will see a list of the shoes available that allows you to consult your existing shoes and add new ones</string>
+    <string name="second_info_text">- You will be able to modify existing shoes, or add new ones using the appropriate buttons, do not forget to save!</string>
+    <string name="confirm_button_text">Confirm</string>
 </resources>

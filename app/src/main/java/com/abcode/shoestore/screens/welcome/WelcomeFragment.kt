@@ -8,8 +8,10 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.NavHostFragment
 import com.abcode.shoestore.R
 import com.abcode.shoestore.databinding.FragmentWelcomeBinding
+import com.abcode.shoestore.screens.login.LoginFragmentDirections
 
 class WelcomeFragment : Fragment() {
 
@@ -26,7 +28,8 @@ class WelcomeFragment : Fragment() {
         viewModel = ViewModelProvider(this).get(WelcomeViewModel::class.java)
 
         binding.nextButton.setOnClickListener{
-            Toast.makeText(context, "Coming soon", Toast.LENGTH_SHORT).show()
+            val action = WelcomeFragmentDirections.actionWelcomeFragmentToInstructionsFragment()
+            NavHostFragment.findNavController(this).navigate(action)
         }
 
         return binding.root
