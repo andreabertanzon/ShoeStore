@@ -14,4 +14,8 @@ class ShoeListingViewModel : ViewModel() {
     init {
         _shoesList.value = mutableListOf()
     }
+
+    fun addShoes(){
+        _shoesList.value?.add(Shoes("Reebel", "Reebok", 43, "Amazing shoe"))
+    }
 }

@@ -25,5 +25,22 @@
         android:id="@+id/instructionsFragment"
         android:name="com.abcode.shoestore.screens.instructions.InstructionsFragment"
         android:label="fragment_instructions"
-        tools:layout="@layout/fragment_instructions" />
+        tools:layout="@layout/fragment_instructions" >
+        <action
+            android:id="@+id/action_instructionsFragment_to_shoeListingFragment"
+            app:destination="@id/shoeListingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/shoeListingFragment"
+        android:name="com.abcode.shoestore.screens.shoelisting.ShoeListingFragment"
+        android:label="ShoeListingFragment" >
+        <action
+            android:id="@+id/action_shoeListingFragment_to_detailsFragment"
+            app:destination="@id/detailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailsFragment"
+        android:name="com.abcode.shoestore.screens.shoedetails.DetailsFragment"
+        android:label="fragment_details"
+        tools:layout="@layout/fragment_details" />
 </navigation>

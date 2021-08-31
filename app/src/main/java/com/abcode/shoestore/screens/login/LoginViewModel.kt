@@ -26,7 +26,8 @@ class LoginViewModel : ViewModel() {
      * Login button is pressed, the user can login. I used ViewModel logic here even if I could have
      * placed a simple button click listener. I preferred this way since in a full Login Scenario you won't
      * just listen to the login, but you would have classes that can handle the call to the backend,
-     * to check if the user can login.
+     * to check if the user can login. I would like to keep working on this app even after I finish
+     * the assignment so that I can add to it Recycler View and a full login logic (with a .NET backend)
      */
     fun onLogin(){
         _eventLogin.value = true

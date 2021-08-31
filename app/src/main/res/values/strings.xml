@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">ShoeStore</string>
+    <string name="app_name">Shoes Store</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="email_label_text">Email</string>
@@ -15,4 +15,5 @@
     <string name="first_info_text">- In the next screen you will see a list of the shoes available that allows you to consult your existing shoes and add new ones</string>
     <string name="second_info_text">- You will be able to modify existing shoes, or add new ones using the appropriate buttons, do not forget to save!</string>
     <string name="confirm_button_text">Confirm</string>
+    <string name="shoes_list_title">Your Shoes:</string>
 </resources>
