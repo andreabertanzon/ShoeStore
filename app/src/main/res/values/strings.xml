@@ -22,4 +22,10 @@
     <string name="shoeslist_nav_label">Your Shoes</string>
     <string name="details_nav_label">Details</string>
     <string name="logout_nav_label">Logout</string>
+    <string name="details_title">Add Shoes</string>
+    <string name="details_name_label">Name</string>
+    <string name="details_company_label">Company</string>
+    <string name="details_size_label">Size</string>
+    <string name="details_description_label">Description</string>
+    <string name="details_save_btn">Save</string>
 </resources>

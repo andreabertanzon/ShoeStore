@@ -45,7 +45,12 @@
         android:id="@+id/detailsFragment"
         android:name="com.abcode.shoestore.screens.shoedetails.DetailsFragment"
         android:label="@string/details_nav_label"
-        tools:layout="@layout/fragment_details" />
+        tools:layout="@layout/fragment_details" >
+        <action
+            android:id="@+id/action_detailsFragment_to_shoeListingFragment"
+            app:destination="@id/shoeListingFragment"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+    </fragment>
     <fragment
         android:id="@+id/logoutFragment"
         android:name="com.abcode.shoestore.screens.LogoutFragment"
