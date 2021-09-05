@@ -31,7 +31,13 @@ class ShoeListingViewModel : ViewModel(), Observable {
     }
 
     fun addShoes(newShoes: Shoes){
-        _shoesList.value?.add(newShoes)
+        _shoesList.value?.add(Shoes(
+            newShoes.name,
+            newShoes.company,
+            newShoes.size,
+            newShoes.description
+        ))
+        shoes = Shoes()
     }
 
     override fun addOnPropertyChangedCallback(callback: Observable.OnPropertyChangedCallback?) {

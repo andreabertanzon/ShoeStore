@@ -32,9 +32,15 @@
             app:layout_constraintVertical_bias="1.0">
 
             <LinearLayout
+                android:id="@+id/shoes_container"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical" />
+                android:layout_height="match_parent"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:orientation="vertical"
+                android:paddingTop="8dp"
+                android:paddingRight="8dp"
+                android:paddingBottom="8dp" />
         </ScrollView>
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton

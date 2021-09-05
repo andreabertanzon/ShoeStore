@@ -1,10 +1,13 @@
 package com.abcode.shoestore.screens.shoedetails
 
+import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.Window
+import android.view.inputmethod.InputMethodManager
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.ViewModelProvider
@@ -29,8 +32,12 @@ class DetailsFragment : Fragment() {
         binding =
             DataBindingUtil.inflate(inflater, R.layout.fragment_details, container, false)
 
+        //retrieving the activityViewModel
         viewModel = ViewModelProvider(requireActivity()).get(ShoeListingViewModel::class.java)
 
+        // initialize the shoes variable into a new Shoes
+        binding.shoes = Shoes()
+        binding.shoesListViewModel = viewModel
         binding.saveBtn.setOnClickListener {
             onSavePressed()
         }
@@ -39,13 +46,7 @@ class DetailsFragment : Fragment() {
     }
 
     private fun onSavePressed() {
-        val newShoes = Shoes(
-            binding.nameText.text.toString(),
-            binding.companyText.text.toString(),
-            binding.sizeText.text.toString().toDouble(),
-            binding.descriptionText.text.toString()
-        )
-        viewModel.addShoes(newShoes)
+        viewModel.addShoes(viewModel.shoes)
         val action = DetailsFragmentDirections.actionDetailsFragmentToShoeListingFragment()
         NavHostFragment.findNavController(this).navigate(action)
     }

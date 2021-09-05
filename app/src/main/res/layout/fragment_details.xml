@@ -6,6 +6,9 @@
         <variable
             name="shoes"
             type="com.abcode.shoestore.models.Shoes" />
+        <variable
+            name="shoesListViewModel"
+            type="com.abcode.shoestore.screens.shoelisting.ShoeListingViewModel" />
     </data>
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
@@ -32,6 +35,7 @@
         android:ems="10"
         android:hint="Company Name"
         android:inputType="textPersonName"
+        android:text="@={shoesListViewModel.shoes.company}"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -79,6 +83,7 @@
         android:layout_marginEnd="16dp"
         android:ems="10"
         android:hint="Insert Name"
+        android:text="@={shoesListViewModel.shoes.name}"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -93,6 +98,7 @@
         android:layout_marginEnd="16dp"
         android:ems="10"
         android:hint="Size"
+        android:text="@{Double.toString(shoesListViewModel.shoes.size)}"
         android:inputType="numberDecimal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -109,7 +115,8 @@
         android:inputType="textMultiLine"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        android:text="@={shoesListViewModel.shoes.description}"/>
 
     <TextView
         android:id="@+id/textView3"
