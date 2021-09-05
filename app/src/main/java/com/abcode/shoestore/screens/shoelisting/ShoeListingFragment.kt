@@ -4,10 +4,8 @@ import android.graphics.Color
 import android.os.Bundle
 import android.text.Layout
 import android.util.Log
+import android.view.*
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
@@ -15,7 +13,10 @@ import androidx.appcompat.widget.LinearLayoutCompat
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.fragment.findNavController
+import androidx.navigation.ui.onNavDestinationSelected
 import com.abcode.shoestore.R
 import com.abcode.shoestore.databinding.FragmentShoeListingBinding
 import com.abcode.shoestore.models.Shoes
@@ -33,9 +34,10 @@ class ShoeListingFragment : Fragment() {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_shoe_listing, container, false)
 
         viewModel.shoesList.observe(viewLifecycleOwner,{
-            Log.i("VM", "${viewModel.shoesList.value?.count()}")
             viewModel.shoesList.value?.let { el -> createShoes(el) }
         })
+
+        setHasOptionsMenu(true)
 
         binding.addButton.setOnClickListener{
             val action = ShoeListingFragmentDirections.actionShoeListingFragmentToDetailsFragment()
@@ -61,6 +63,15 @@ class ShoeListingFragment : Fragment() {
                 shoesContainer.addView(shoesLayout)
             }
         }
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return item.onNavDestinationSelected(findNavController()) || super.onOptionsItemSelected(item)
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu, menuInflater: MenuInflater) {
+        super.onCreateOptionsMenu(menu, menuInflater)
+        menuInflater.inflate(R.menu.options_menu, menu)
     }
 }
 
