@@ -16,4 +16,10 @@
     <string name="second_info_text">- You will be able to modify existing shoes, or add new ones using the appropriate buttons, do not forget to save!</string>
     <string name="confirm_button_text">Confirm</string>
     <string name="shoes_list_title">Your Shoes:</string>
+    <string name="login_nav_label">Login</string>
+    <string name="welcome_nav_label">Welcome</string>
+    <string name="instructions_nav_label">Instructions</string>
+    <string name="shoeslist_nav_label">Your Shoes</string>
+    <string name="details_nav_label">Details</string>
+    <string name="logout_nav_label">Logout</string>
 </resources>
