@@ -20,6 +20,7 @@ import androidx.navigation.ui.onNavDestinationSelected
 import com.abcode.shoestore.R
 import com.abcode.shoestore.databinding.FragmentShoeListingBinding
 import com.abcode.shoestore.models.Shoes
+import com.abcode.shoestore.screens.ShoesCard
 
 class ShoeListingFragment : Fragment() {
 
@@ -50,17 +51,17 @@ class ShoeListingFragment : Fragment() {
         context?.let { context ->
             val shoesContainer = binding.shoesContainer
             shoes.forEach { pairOfshoes ->
-//                val shoeLayout = ShoeLayout(context)
-//                shoesLayout.loadShoe(shoe)
-//                shoesContainer.addView(shoesLayout)
-                val shoesLayout = TextView(context)
-                shoesLayout.text = pairOfshoes.name
-//                shoesLayout.setTextColor(Color.BLACK)
-                shoesLayout.layoutParams= LinearLayout.LayoutParams(
+                val shoesCard = ShoesCard(context)
+                shoesCard.setShoesInCard(pairOfshoes)
+                shoesContainer.addView(shoesCard)
+//                val shoesLayout = TextView(context)
+//                shoesLayout.text = pairOfshoes.name
+////                shoesLayout.setTextColor(Color.BLACK)
+                shoesCard.layoutParams= LinearLayout.LayoutParams(
                     LinearLayout.LayoutParams.MATCH_PARENT,
                     LinearLayout.LayoutParams.MATCH_PARENT
                 )
-                shoesContainer.addView(shoesLayout)
+                shoesContainer.addView(shoesCard)
             }
         }
     }
