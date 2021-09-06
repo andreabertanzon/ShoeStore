@@ -42,7 +42,17 @@ class DetailsFragment : Fragment() {
             onSavePressed()
         }
 
+        binding.cancelBtn.setOnClickListener {
+            onCancelPressed()
+        }
+
         return binding.root
+    }
+
+    private fun onCancelPressed() {
+        viewModel.cancelShoesAdd()
+        val action = DetailsFragmentDirections.actionDetailsFragmentToShoeListingFragment()
+        NavHostFragment.findNavController(this).navigate(action)
     }
 
     private fun onSavePressed() {

@@ -28,4 +28,5 @@
     <string name="details_size_label">Size</string>
     <string name="details_description_label">Description</string>
     <string name="details_save_btn">Save</string>
+    <string name="details_cancel_btn">Cancel</string>
 </resources>

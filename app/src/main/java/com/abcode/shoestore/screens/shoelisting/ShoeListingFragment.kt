@@ -52,11 +52,11 @@ class ShoeListingFragment : Fragment() {
             val shoesContainer = binding.shoesContainer
             shoes.forEach { pairOfshoes ->
                 val shoesCard = ShoesCard(context)
+                if (shoesCard.parent != null){
+                    val parentView:ViewGroup = shoesCard.parent as ViewGroup
+                    parentView.removeView(shoesCard)
+                }
                 shoesCard.setShoesInCard(pairOfshoes)
-                shoesContainer.addView(shoesCard)
-//                val shoesLayout = TextView(context)
-//                shoesLayout.text = pairOfshoes.name
-////                shoesLayout.setTextColor(Color.BLACK)
                 shoesCard.layoutParams= LinearLayout.LayoutParams(
                     LinearLayout.LayoutParams.MATCH_PARENT,
                     LinearLayout.LayoutParams.MATCH_PARENT

@@ -47,4 +47,8 @@ class ShoeListingViewModel : ViewModel(), Observable {
     override fun removeOnPropertyChangedCallback(callback: Observable.OnPropertyChangedCallback?) {
         propertyChangeRegistry.add(callback)
     }
+
+    fun cancelShoesAdd() {
+        shoes = Shoes()
+    }
 }

@@ -21,6 +21,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="244dp"
+        android:labelFor="@id/size_text"
         android:text="@string/details_size_label"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/title_text" />
@@ -35,6 +36,7 @@
         android:ems="10"
         android:hint="Company Name"
         android:inputType="textPersonName"
+        android:minHeight="48dp"
         android:text="@={shoesListViewModel.shoes.company}"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -47,6 +49,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="156dp"
+        android:labelFor="@id/company_text"
         android:text="@string/details_company_label"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/title_text" />
@@ -71,6 +74,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="69dp"
+        android:labelFor="@id/name_text"
         android:text="@string/details_name_label"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/title_text" />
@@ -83,8 +87,9 @@
         android:layout_marginEnd="16dp"
         android:ems="10"
         android:hint="Insert Name"
-        android:text="@={shoesListViewModel.shoes.name}"
         android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:text="@={shoesListViewModel.shoes.name}"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/name_label" />
@@ -98,11 +103,13 @@
         android:layout_marginEnd="16dp"
         android:ems="10"
         android:hint="Size"
-        android:text="@{Double.toString(shoesListViewModel.shoes.size)}"
         android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        android:text="@={shoesListViewModel.shoes.size}"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/size_label" />
+        app:layout_constraintTop_toBottomOf="@+id/size_label"
+        tools:ignore="HardcodedText" />
 
     <EditText
         android:id="@+id/description_text"
@@ -113,10 +120,11 @@
         android:ems="10"
         android:gravity="start|top"
         android:inputType="textMultiLine"
+        android:minHeight="48dp"
+        android:text="@={shoesListViewModel.shoes.description}"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3"
-        android:text="@={shoesListViewModel.shoes.description}"/>
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <TextView
         android:id="@+id/textView3"
@@ -124,6 +132,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="244dp"
+        android:labelFor="@id/description_text"
         android:text="@string/details_description_label"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/name_label" />
@@ -136,6 +145,18 @@
         android:layout_marginTop="24dp"
         android:text="@string/details_save_btn"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/description_text" />
+
+    <Button
+        android:id="@+id/cancel_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="@color/purple_200"
+        android:text="@string/details_cancel_btn"
+        android:textColor="@color/lightBlack"
+        app:layout_constraintStart_toEndOf="@+id/save_btn"
         app:layout_constraintTop_toBottomOf="@+id/description_text" />
 </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
