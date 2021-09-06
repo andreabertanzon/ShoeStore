@@ -8,7 +8,9 @@
             name="shoe_list_item"
             type="com.abcode.shoestore.models.Shoes" />
     </data>
-
+<!-- This is a single view that I use for each pair of shoes in the list
+ It has Two nested Linear Layouts since it is actually a simple
+ design and allows for less code for the constraints-->
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

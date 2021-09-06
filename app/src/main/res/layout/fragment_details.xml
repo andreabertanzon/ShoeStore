@@ -10,6 +10,9 @@
             name="shoesListViewModel"
             type="com.abcode.shoestore.screens.shoelisting.ShoeListingViewModel" />
     </data>
+    <!-- Constraint Layout to allow better placement and future expansion possibilities
+     I think that even if you plan a mock app, you still have to think to what you could improve
+     in it in the future, and future proof it.-->
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"

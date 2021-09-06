@@ -2,6 +2,8 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <!--The linear layout here does not serve a particular use
+    it is nice to have to organize the personalized Toolbar.-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"

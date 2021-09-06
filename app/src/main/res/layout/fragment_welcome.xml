@@ -8,7 +8,9 @@
             type="com.abcode.shoestore.screens.welcome.WelcomeFragment" />
     </data>
 
-    <!-- Constraint Layout because I prefer to have more control on where the items on the screen are placed -->
+    <!-- Constraint Layout because I prefer to have more control on where the items on the screen are placed
+     I really feel that when you have particular views or Images, ConstraintLayout works wonders
+     and simplifies item placements a lot-->
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/welcome_constraint_layout"

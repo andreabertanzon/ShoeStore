@@ -7,7 +7,11 @@
             name="loginViewModel"
             type="com.abcode.shoestore.screens.login.LoginViewModel"/>
     </data>
-
+    <!-- I chose a contraint layout to allow for precise
+    placements of each of the components that make up the view. While
+    simple, the constraint layout allowed me to place the Icon and the
+    svg under the icon in a more precise way that is too hard
+    with Linear Layout-->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"

@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- this fragment is an extra that I want to keep in case I would like
+to add something in the future for Logout. It is for future plans-->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_height="match_parent"
     android:layout_width="match_parent"
-    tools:context=".SettingsFragment"
+    tools:context=".MainActivity"
     android:gravity="center"
     android:orientation="vertical">
 

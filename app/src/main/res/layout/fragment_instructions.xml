@@ -3,6 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <!--I chose the constraint layout to be more free with the Icon placements. I managed
+    to create a triangular shape with the three icons that allows for some movement in the image
+    and this is good on the eye. It w-->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
