@@ -47,6 +47,8 @@ class ShoeListingFragment : Fragment() {
 
         return binding.root
     }
+
+// built from: https://stackoverflow.com/questions/2395769/how-to-programmatically-add-views-to-views
     private fun createShoes(shoes: List<Shoes>) {
         context?.let { context ->
             val shoesContainer = binding.shoesContainer

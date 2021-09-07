@@ -26,7 +26,7 @@ class ShoesCard : LinearLayout {
     private val binding: SampleShoesCardBinding = DataBindingUtil.inflate(LayoutInflater.from(context), R.layout.sample_shoes_card, this, false)
 
     fun setShoesInCard(shoe: Shoes) {
-        binding.apply {
+        binding.apply { // following IntelliJ suggestion
             addView(this.root)
             modelNameTxt.text = shoe.name
             modelCompanyTxt.text = shoe.company
